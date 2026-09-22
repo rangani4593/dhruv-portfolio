@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Everything visual is Tailwind utilities in the components. This file only holds:
+   base resets, the handful of things utilities can't express (SplitText word gradient,
+   marquee mask, orbit trigonometry via CSS vars), and GSAP-hook classes with no styling. */
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans leading-[1.65] antialiased overflow-x-hidden;
+  }
+  ::selection {
+    @apply bg-b1 text-white;
+  }
+}
+
+@layer components {
+  /* gradient text — also applied to SplitText word wrappers (.w) so masked words keep it */
+  .gr,
+  .gr .w {
+    @apply bg-grad bg-clip-text text-transparent;
+  }
+  .hero .h1 .w {
+    padding-bottom: 0.08em; /* room for descenders inside the word mask */
+  }
+
+  /* GSAP moves .mt; the fade at both ends is a mask */
+  .marquee {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+
+  .reveal {
+    will-change: transform, opacity;
+  }
+
+  /* ---- hero tech orbit: ring radius (--r) and a per-breakpoint scale (--rs) ---- */
+  .orbit-wrap {
+    --size: 440px;
+    --rs: 1;
+    width: var(--size);
+  }
+  .orbit {
+    width: var(--size);
+    height: var(--size);
+  }
+  .orbit-ring::before {
+    content: "";
+    position: absolute;
+    inset: calc(50% - var(--r) * var(--rs));
+    border-radius: 50%;
+    border: 1px dashed rgba(11, 99, 229, 0.22);
+  }
+  .orbit-pos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: rotate(calc(var(--i) * 360deg / var(--n))) translateX(calc(var(--r) * var(--rs)))
+      rotate(calc(var(--i) * -360deg / var(--n)));
+  }
+  .orbit-logo {
+    @apply absolute top-0 left-0 grid place-items-center rounded-2xl bg-card border border-line
+      shadow-[0_10px_26px_-14px_rgba(11,99,229,.45)] transition-[box-shadow,border-color] duration-300
+      hover:border-b1 hover:shadow-[0_14px_30px_-12px_#0b63e5];
+    width: 52px;
+    height: 52px;
+    margin: -26px 0 0 -26px;
+    will-change: transform;
+  }
+  .orbit-logo img {
+    @apply w-7 h-7 object-contain;
+  }
+  .r2 .orbit-logo {
+    width: 46px;
+    height: 46px;
+    margin: -23px 0 0 -23px;
+  }
+  .r2 .orbit-logo img {
+    @apply w-6 h-6;
+  }
+  @media (max-width: 1100px) {
+    .orbit-wrap {
+      --size: 380px;
+      --rs: 0.8;
+    }
+  }
+  @media (max-width: 900px) {
+    .orbit-wrap {
+      --size: 340px;
+      --rs: 0.84;
+      margin: 28px auto 0;
+    }
+    .orbit-logo {
+      width: 46px;
+      height: 46px;
+      margin: -23px 0 0 -23px;
+    }
+    .orbit-logo img {
+      width: 24px;
+      height: 24px;
+    }
+    .r2 .orbit-logo {
+      width: 40px;
+      height: 40px;
+      margin: -20px 0 0 -20px;
+    }
+    .r2 .orbit-logo img {
+      width: 21px;
+      height: 21px;
+    }
+  }
+  @media (max-width: 480px) {
+    .orbit-wrap {
+      --size: 300px;
+      --rs: 0.78;
+    }
+    .orbit-logo {
+      width: 42px;
+      height: 42px;
+      margin: -21px 0 0 -21px;
+    }
+    .orbit-logo img {
+      width: 22px;
+      height: 22px;
+    }
+    .r2 .orbit-logo {
+      width: 36px;
+      height: 36px;
+      margin: -18px 0 0 -18px;
+    }
+    .r2 .orbit-logo img {
+      width: 19px;
+      height: 19px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "dhruv-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dhruv Rangani — React Developer portfolio. Next.js (App Router), frontend only, atomic design structure.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "lucide-react": "^1.47.0",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.19"
+  }
+}
