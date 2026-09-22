@@ -8,7 +8,7 @@ import { gsap, ScrollTrigger, SplitText, prefersReducedMotion } from "@/lib/gsap
 //  • hero: SplitText word-mask headline + staggered bits, floating panel
 //  • section headings stagger (badge → title → lead)
 //  • tech-stack pop-in, marquee (GSAP-driven, pauses on hover)
-//  • project banners parallax + 3D tilt, magnetic primary buttons
+//  • project banners parallax + 3D tilt, magnetic buttons (.magnetic)
 //  • background blob parallax
 // StrictMode-safe: gsap.context() + explicit fromTo + revert() on cleanup.
 export default function Motion() {
@@ -112,8 +112,8 @@ export default function Motion() {
         });
       });
 
-      /* ---------- magnetic primary buttons ---------- */
-      q(".btn-b").forEach((btn) => {
+      /* ---------- magnetic buttons ---------- */
+      q(".magnetic").forEach((btn) => {
         const x = gsap.quickTo(btn, "x", { duration: 0.35, ease: "power3.out" });
         const y = gsap.quickTo(btn, "y", { duration: 0.35, ease: "power3.out" });
         const move = (e) => {

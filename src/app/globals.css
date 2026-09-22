@@ -7,8 +7,13 @@
    marquee mask, orbit trigonometry via CSS vars), and GSAP-hook classes with no styling. */
 
 @layer base {
+  /* spinning orbit rings have square bounding boxes wider than the circle — never let them scroll the page */
+  html,
   body {
-    @apply bg-bg text-ink font-sans leading-[1.65] antialiased overflow-x-hidden;
+    overflow-x: clip;
+  }
+  body {
+    @apply bg-bg text-ink font-sans leading-[1.65] antialiased;
   }
   ::selection {
     @apply bg-b1 text-white;
@@ -134,6 +139,12 @@
     .r2 .orbit-logo img {
       width: 19px;
       height: 19px;
+    }
+  }
+  @media (max-width: 360px) {
+    .orbit-wrap {
+      --size: 260px;
+      --rs: 0.68;
     }
   }
 }

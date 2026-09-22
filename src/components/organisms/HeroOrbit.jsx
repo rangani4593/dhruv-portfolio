@@ -5,7 +5,7 @@ import Icon from "@/components/atoms/Icon";
 import { techStack, profile } from "@/data/site";
 
 // Organism: HeroOrbit — the hero visual. Two rings of real tech logos orbit a
-// glowing "DR" core while capability pills sit in the square's corners (desktop)
+// glowing photo core while capability pills sit in the square's corners (desktop)
 // or in a row underneath (mobile). Ring geometry lives in globals.css (CSS vars);
 // everything else is Tailwind. All motion is GSAP.
 const INNER = techStack.slice(0, 6);
@@ -68,9 +68,8 @@ export default function HeroOrbit() {
         <div className="orbit-glow absolute w-[62%] h-[62%] rounded-full pointer-events-none blur-[18px] bg-[radial-gradient(circle,rgba(59,140,255,.45),rgba(0,184,212,.18)_55%,transparent_72%)]" />
         {ring(OUTER, "r2", 165)}
         {ring(INNER, "r1", 100)}
-        <div className="orbit-core relative z-[2] grid place-items-center content-center rounded-full bg-grad text-white will-change-transform w-[72px] h-[72px] sm:w-[84px] sm:h-[84px] md:w-[104px] md:h-[104px] shadow-[0_24px_60px_-20px_rgba(11,99,229,.7),inset_0_0_0_5px_rgba(255,255,255,.18)]">
-          <span className="font-sans font-black leading-none tracking-[-0.03em] text-[22px] sm:text-[26px] md:text-[32px]">{profile.initials}</span>
-          <span className="text-[9px] md:text-[10px] tracking-[.18em] uppercase opacity-90 mt-[3px]">{profile.name.split(" ")[0]}</span>
+        <div className="orbit-core relative z-[2] rounded-full bg-grad p-[3px] will-change-transform w-[68px] h-[68px] sm:w-[76px] sm:h-[76px] md:w-[92px] md:h-[92px] shadow-[0_24px_60px_-20px_rgba(11,99,229,.7)]">
+          <img src={profile.avatar} alt={profile.name} loading="eager" className="w-full h-full rounded-full object-cover" />
         </div>
       </div>
 

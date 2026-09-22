@@ -8,6 +8,7 @@ export const profile = {
   role: "AI Engineer",                       // footer + short mentions
   title: "AI Engineer & Full-Stack Developer", // hero / meta / long mentions
   initials: "DR",
+  avatar: "/dhruv-avatar.jpg",
   email: "dhruvpatel0040@gmail.com",
   phone: "+91 99985 36434",
   phoneHref: "+919998536434",
