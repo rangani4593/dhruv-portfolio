@@ -31,7 +31,7 @@ export default function ContactForm() {
       <label htmlFor="msg" className={LABEL}>
         Message
       </label>
-      <textarea id="msg" required placeholder="Tell me about your project..." className={`${FIELD} min-h-[120px] resize-y`} />
+      <textarea id="msg" required placeholder="Tell me a bit about your project" className={`${FIELD} min-h-[120px] resize-y`} />
 
       <Button type="submit" variant="b" className="w-full justify-center mt-[22px]">
         {sent ? "Sent ✓" : "Send message →"}
@@ -39,7 +39,7 @@ export default function ContactForm() {
 
       {sent && (
         <div className="mt-4 p-[13px] rounded-[11px] bg-emerald-500/[.12] text-[#0e9f6e] text-center text-sm font-medium">
-          ✅ Thanks! I&apos;ll get back to you soon.
+          Thanks for your message. I&apos;ll reply soon.
         </div>
       )}
     </form>

@@ -9,7 +9,7 @@ export default function FeaturedProjects() {
   const featured = projects.slice(0, 3);
   return (
     <section className="py-12 md:py-[70px]">
-      <SectionHeading badge="Selected Work" title="Projects I'm proud of" />
+      <SectionHeading badge="Selected Work" title="Recent projects" />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[22px]">
         {featured.map((p, i) => (
           <Reveal key={p.title} delay={(i % 3) * 0.1} className="flex">

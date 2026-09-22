@@ -11,7 +11,7 @@ export default function NotFound() {
           Page not <span className="gr">found</span>
         </h1>
         <p className="text-body text-[clamp(16px,2vw,18px)] max-w-[600px] mx-auto mb-[30px]">
-          The page you&apos;re looking for doesn&apos;t exist or has moved.
+          This page doesn&apos;t exist or has been moved.
         </p>
         <Button href="/" variant="b">
           Back to home →

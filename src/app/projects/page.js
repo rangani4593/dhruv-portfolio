@@ -1,7 +1,7 @@
 import PageShell from "@/components/templates/PageShell";
 import ProjectsGrid from "@/components/organisms/ProjectsGrid";
 
-export const metadata = { title: "Projects — Dhruv Rangani" };
+export const metadata = { title: "Projects | Dhruv Rangani" };
 
 // Route: /projects
 export default function ProjectsPage() {
@@ -9,7 +9,7 @@ export default function ProjectsPage() {
     <PageShell
       badge="Portfolio"
       title={<>Projects I&apos;ve <span className="gr">delivered</span></>}
-      lead="AI platforms, Shopify apps, full-stack systems, CMS websites and dashboards — real products I owned from architecture to launch."
+      lead="AI tools, Shopify apps, full-stack systems, CMS websites and dashboards. These are real client projects that I worked on from planning to launch."
     >
       <ProjectsGrid />
     </PageShell>

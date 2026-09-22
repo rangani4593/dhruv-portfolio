@@ -16,15 +16,15 @@ export default function Hero() {
             <Badge>{profile.title}</Badge>
           </span>
           <h1 className="h1 text-[clamp(40px,6.5vw,68px)] font-bold leading-[1.06] tracking-[-0.02em] text-ink my-5">
-            I turn AI ideas into <span className="gr">products people use</span>.
+            I build AI products <span className="gr">that people use</span>.
           </h1>
           <p className="text-body text-[clamp(16px,2vw,18px)] max-w-[600px]" data-hero="lead">
-            AI video &amp; image platforms, Shopify apps, CMS websites and data-heavy dashboards —
-            12+ production builds across React, Vue 3, Astro and Node.js, owned from architecture to launch.
+            I&apos;ve delivered 12+ projects, including AI video and image tools, Shopify apps, CMS websites
+            and dashboards. I work with React, Vue 3, Astro and Node.js, from planning to launch.
           </p>
           <div className="flex flex-wrap gap-3.5 mt-[34px]" data-hero="btns">
             <Button href="/projects" variant="b">
-              See the work →
+              View my work →
             </Button>
             <Button href="/contact" variant="o">
               Let&apos;s talk

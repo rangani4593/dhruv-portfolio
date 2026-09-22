@@ -1,8 +1,8 @@
 import Reveal from "@/components/atoms/Reveal";
 import ProjectCard from "@/components/molecules/ProjectCard";
-import { projects } from "@/data/site";
+import { projectsLatestFirst as projects } from "@/data/site";
 
-// Organism: ProjectsGrid — 2-column grid of all projects.
+// Organism: ProjectsGrid — 2-column grid of all projects, latest first.
 export default function ProjectsGrid() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-[22px]">

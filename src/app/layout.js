@@ -12,9 +12,9 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Dhruv Rangani — AI Engineer & Full-Stack Developer",
+  title: "Dhruv Rangani | AI Engineer & Full-Stack Developer",
   description:
-    "AI engineer and full-stack developer shipping AI video & image platforms, Shopify apps, CMS websites and dashboards across React, Vue 3, Astro and Node.js.",
+    "Dhruv Rangani is an AI engineer and full-stack developer. He builds AI video and image tools, Shopify apps, CMS websites and dashboards with React, Vue 3, Astro and Node.js.",
 };
 
 // `.blob.b-1/.b-2` are GSAP parallax hooks (Motion.jsx).

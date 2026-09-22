@@ -7,7 +7,7 @@ import { process } from "@/data/site";
 export default function Process() {
   return (
     <section className="py-12 md:py-[70px]">
-      <SectionHeading badge="How I Work" title="From idea to shipped" />
+      <SectionHeading badge="How I Work" title="My process" />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[22px]">
         {process.map((p, i) => (
           <Reveal key={p.n} variant="scale" delay={(i % 4) * 0.08} className="flex">
